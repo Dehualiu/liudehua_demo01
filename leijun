@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷军个人介绍</title>
+    <style>
+	/* 新增背景图样式 */
+       .hero-section {
+        position: relative;
+        height: 350px; /* 根据需要调整高度 */
+        background: url('雷军1.jpg') no-repeat center center/cover;
+        color: white; /* 设置文字颜色为白色，确保在深色背景上可读 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+   	}
+	.hero-title {
+        font-size: 5rem; /* 增大“雷军”这两个字的字体大小 */
+        margin-bottom: 1rem;
+    	}
+	.hero-text {
+        font-size: 1.2rem; /* 增大简介文字的字体大小 */
+        line-height: 1.5;
+        text-align: center;
+        max-width: 80%; /* 限制文字宽度，使布局更美观 */
+    	}
+        /* 背景遮罩层 */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+        }
+        /* 保证文字在遮罩层上方 */
+        .title, .hero-text {
+            position: relative;
+            z-index: 1;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background-color: #333;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links a {
+            color: #ddd;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* 简介部分 */
+       
+
+
+        /* 图文卡片布局 */
+        .section {
+            padding: 60px 10%;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .card-title {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 轮播图 */
+        .carousel {
+            padding: 40px 10%;
+            background: #333;
+        }
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+        }
+        .carousel-track {
+            display: flex;
+            animation: scroll 30s linear infinite;
+        }
+        .carousel-item {
+            min-width: 33.33%;
+            padding: 10px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                margin-top: 20px;
+            }
+            .nav-links a {
+                display: block;
+                margin: 10px 0;
+            }
+            .hero-title {
+                font-size: 36px;
+            }
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+            .carousel-item {
+                min-width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">雷军简介</div>
+        <div class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#career">生涯</a>
+            <a href="#achievement">成就</a>
+            <a href="#moments">名场面</a>
+        </div>
+    </nav>
+
+    <!-- 简介部分 -->
+    <section class="hero-section">
+	<h1 class="hero-title">雷    军</h1>
+        <p class="hero-text">
+           雷军（1969年12月16日出生），湖北仙桃人，中国著名企业家、天使投资人，现任小米集团董事长兼CEO。自幼展露对科技的敏锐洞察力，1987年考入武汉大学计算机系，两年修完全部学分并发表多篇学术论文。大学期间受《硅谷之火》启发，立志成为科技创业者。其职业生涯始于金山软件，后创立小米科技，以“互联网+”思维重塑中国制造业，被誉为“中国乔布斯”。
+        </p>
+    </section>
+
+    <!-- 生涯经历 -->
+    <section class="section" id="career">
+        <h2 class="section-title">职业生涯</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="金山时期雷军.jpg" alt="金山时期">
+                <h3 class="card-title">金山时期（1992-2007）</h3>
+                <p class="card-text">23岁加入金山软件，成为第6号员工，主导开发WPS 97并推动金山转型为综合IT企业。2007年带领金山上市后辞职，结束16年“盐碱地耕耘”。</p>
+            </div>
+            <div class="card">
+                <img src="天使投资的雷军.jpg" alt="金山时期">
+                <h3 class="card-title">天使投资与二次创业</h3>
+                <p class="card-text">2007-2010年转型天使投资人，投资凡客、YY语音等项目。2010年创办小米科技，以“极致性价比”模式颠覆手机行业。</p>
+            </div>
+	   <div class="card">
+                <img src="小米生态链.jpg" alt="金山时期">
+                <h3 class="card-title">小米生态建设</h3>
+                <p class="card-text">2011年发布首款小米手机，开创线上直销模式；2014年启动生态链计划，布局智能家居、穿戴设备等领域，构建全球最大消费级IoT平台。</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 主要成就 -->
+    <section class="section" id="achievement" style="background: white;">
+        <h2 class="section-title">主要成就</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="跻身世界500强.jpg" alt="小米科技">
+                <h3 class="card-title">商业创新</h3>
+                <p class="card-text">首创“硬件+新零售+互联网服务”铁人三项模式，推动小米2021年跻身《财富》世界500强。</p>
+            </div>
+            <div class="card">
+                <img src="小米澎湃芯片.jpg" alt="小米科技">
+                <h3 class="card-title">技术突破</h3>
+                <p class="card-text">带领团队研发澎湃芯片，打破国外技术垄断；小米手机全球市场份额连续三年稳居前三。</p>
+            </div>
+	    <div class="card">
+                <img src="小米su7-百大影响人物.jpg" alt="小米科技">
+                <h3 class="card-title">行业影响</h3>
+                <p class="card-text">提出“新国货运动”，带动中国制造向智能化、高端化转型，被《时代》周刊评为“全球百大影响力人物。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 名场面轮播 -->
+    <section class="carousel" id="moments">
+        <h2 class="section-title" style="color: white;">经典时刻</h2>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-item">
+                    <img src="名场面1.jpg" alt="Are you OK">
+                </div>
+                <div class="carousel-item">
+                    <img src="名场面2.jpg" alt="Are you OK">
+                </div>
+		<div class="carousel-item">
+                    <img src="名场面4.jpg" alt="Are you OK">
+                </div>
+		<div class="carousel-item">
+                    <img src="名场面3.jpg" alt="Are you OK">
+                </div>
+		<div class="carousel-item">
+                    <img src="名场面5.jpg" alt="Are you OK">
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
